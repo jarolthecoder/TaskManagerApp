@@ -32,7 +32,7 @@ export const UserPanel = () => {
       </div>
       <div className="user is-flex">
         <div className="user-info">
-          <h4 className="user-name">Wendy Riera</h4>
+          <h4 className="user-name">User</h4>
           <p className="user-title">Super admin</p>
         </div>
         <img src={ UserImg } className="user-img" alt="User Profile Image" width="50" height="auto"/>
