@@ -1,0 +1,26 @@
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-rows: auto;
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.add-btn-grid {
+  height: 100%;
+  min-height: 225px;
+  color: var(--clr-text-primary);
+  background: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: box-shadow ease 0.4s;
+  transition:  all ease 0.2s;
+  cursor: pointer;
+  border: 2px dashed var(--clr-divider);
+}
+
+.add-btn-grid:hover {
+  background: var(--clr-button-bg);
+  border-color: var(--clr-button-bg);
+  color: var(--clr-button-text);
+}

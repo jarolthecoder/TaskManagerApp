@@ -1,0 +1,63 @@
+.user-controls {
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  color: var(--clr-text-primary);
+}
+
+.controls-right {
+  gap: 1rem;
+}
+
+.user-controls p {
+  cursor: pointer;
+}
+
+.user-controls p:hover,
+.user-controls .logout-btn:hover {
+  color: var(--clr-heading-primary);
+  transition: color ease 0.2s;
+}
+
+.user-controls .logout-btn {
+  padding: 0;
+  color: var(--clr-text-primary);
+  background: none;
+}
+
+.logout-text {
+  font-size: var(--fs-small);
+  padding-right: 0.5rem;
+}
+
+.user {
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 0;
+}
+
+.user-name {
+  color: var(--clr-heading-secondary);
+}
+
+.user-title {
+  font-size: var(--fs-small);
+  color: var(--clr-text-secondary);
+}
+
+/* Responsive */
+@media  screen and (max-width: 775px) { 
+  .user {
+    padding: 0;
+  }
+
+  .user-img {
+    width: 35px;
+  }
+  
+  .user-controls .controls-right,
+  .user-info {
+    display: none;
+  }
+}

@@ -1,0 +1,20 @@
+.main-displayer {
+  grid-area: main;
+  background: var(--clr-displayer);
+  padding: 3rem;
+}
+
+.displayer-header-inner .col-right {
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 775px) {
+  .main-displayer {
+    margin-top: 3.5rem;
+    padding: 2rem 1rem;
+  }
+}

@@ -1,0 +1,54 @@
+.task-displayer {
+  padding: 2rem 0 0 0;
+}
+
+.task-displayer-header {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-btn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 5rem;
+  font-size: var(--fs-regular);
+  background: var(--clr-button-bg);
+  color: var(--clr-button-text);
+  box-shadow: 0 2px 15px #5269ff8b;
+}
+
+.add-btn:hover {
+  background: var(--clr-button-hover);
+}
+
+.add-btn-large {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 200px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1.5px solid var(--clr-text-secondary);
+  color: var(--clr-text-secondary);
+  cursor: pointer;
+  transition: background ease 0.15s,
+              color ease 0.15s;
+}
+
+.add-btn-large:hover {
+  background: var(--clr-text-secondary);
+  color: var(--clr-primary);
+}
+
+.empty-msg {
+  color: var(--clr-text-secondary);
+}
+
+/* Responsive */
+@media  screen and (max-width: 775px) {
+  .task-displayer .add-btn {
+    display: none;
+  }
+}

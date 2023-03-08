@@ -1,13 +1,17 @@
-import { createContext, useState } from "react";
-import { useTask } from "./hooks/useTask";
-import { useTheme } from "./hooks/useTheme";
+import { createContext, useState } from 'react'
+import { useGetUser } from './hooks/useGetUser'
+import { useTask } from './hooks/useTask'
+import { useTheme } from './hooks/useTheme'
 
 
-export const AppContext = createContext("");
+export const AppContext = createContext('');
 
 export const AppProvider = ({ children }) => {
   // Theme
   const {theme, handleSwitchTheme} = useTheme();
+
+  // User Authentication
+  const {user, updateUser} = useGetUser();
 
   // Task Management
   const {
@@ -47,6 +51,8 @@ export const AppProvider = ({ children }) => {
   const value = {
     theme,
     handleSwitchTheme,
+    user,
+    updateUser,
     tasks,
     handleNewTask,
     handleUpdateTask,

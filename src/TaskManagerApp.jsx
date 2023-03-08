@@ -1,19 +1,27 @@
-import { Displayer, SideNavLeft, SideNavRight } from "./layout"
-import { TaskModal } from "./tasks/task-modal/TaskModal";
-import { useContext } from "react";
-import { AppContext } from "./AppProvider";
+import { useContext } from 'react'
+import { Navigate, Route, Routes } from 'react-router-dom'
+import { AppContext } from './AppProvider'
+import { HomePage, LoginPage } from './pages-components/'
+import { TaskModal } from './tasks-components/task-modal/TaskModal'
 
 
 const TaskManagerApp = () => {
-  const { theme } = useContext(AppContext);
+  const { theme, user } = useContext(AppContext);
   
   return (
     <main className="main-container" data-theme={ theme }>
-      <div className="inner-container">
-        <SideNavLeft />
-        <Displayer />
-        <SideNavRight />
-      </div>
+      <Routes>
+        <Route
+          exact
+          path="/"
+          element={
+            !user.isLoggedIn 
+            ? ( <LoginPage /> ) 
+            : ( <Navigate replace to={"/dashboard/"} /> )
+          }
+        />
+        <Route path="/dashboard/*" element={ <HomePage />} />
+      </Routes>
       <TaskModal />
     </main>
   )

@@ -41,6 +41,7 @@
   --fs-regular: 1.025rem;
   --fs-medium: 1.5rem;
   --fs-large: 1.75rem;
+  --fs-xlarge: 3.5rem;
 }
 
 [data-theme="dark"] {
@@ -76,6 +77,7 @@
   --clr-bg-accent: #5e80f913;
 }
 
+/* General */
 *,
 ::before,
 ::after {
@@ -112,8 +114,14 @@ body {
   font-size: var(--fs-regular);
 }
 
+/* Fonts */
 h1 {
-  color: var(--clr-heading-primary);
+  font-size: var(--fs-xlarge);
+  color: var(--clr-heading-secondary);
+}
+
+h1 span {
+  color: var(--clr-button-bg);
 }
 
 h2 {
@@ -147,83 +155,24 @@ span {
   background: var(--clr-button-bg);
 }
 
+/* Main Container */
 .main-container {
   height: 100%;
   min-height: 100vh;
   min-height: 100dvh;
-  padding: 1rem;
   position: relative;
   background: var(--clr-displayer);
-}
-
-.inner-container {
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(auto, 16%) minmax(300px, 68%) minmax(100px, 16%);
-  grid-template-areas:
-    'nav-left main nav-right';
-  height: 100%;
 }
 
 .is-flex {
   display: flex;
 }
 
-.sidenav-left,
-.sidenav-right {
-  width: 15.8%;
-  max-width: 15.8%;
-  height: calc(100vh - 3vh);
-  justify-content: space-between;
-  flex-direction: column;
-  background: var(--clr-sidebar);
-  border-radius: 1.5rem;
-}
-
 /* Responsive */
-@media screen and (max-width: 1255px) {
-  .inner-container {
-    grid-template-columns: minmax(auto, 18%) minmax(auto, 82%);
-    grid-template-areas:
-      'nav-left main';
-  }
-}
-
-@media screen and (max-width: 1070px) {
-  .inner-container {
-    grid-template-columns: minmax(auto, 10%) minmax(auto, 90%);
-    grid-template-areas:
-      'nav-left main';
-  }
-  .sidenav-left {
-    width: auto;
-    max-width: 10%;
-  }
-}
-
 @media  screen and (max-width: 775px) {
   :root {
     --fs-medium: 1.25rem;
     --fs-large: 1.5rem;
-  }
-
-  .main-container {
-    padding: 0;
-  }
-
-  .inner-container {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: minmax(auto, auto) minmax(100dvh, auto) minmax(auto, auto);
-    grid-template-areas:
-      'nav-right '
-      'main'
-      'nav-left';
-  }
-
-  .sidenav-left,
-  .sidenav-right {
-    width: 100%;
-    max-width: 100%;
+    --fs-xlarge: 2rem;
   }
 }
