@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { AppContext } from './AppProvider'
 import { AuthProvider } from './auth/provider'
-import { TaskModal } from './tasks-components/task-modal/TaskModal'
+import { TaskModal } from './tasks'
 import { AppRouter } from './router/AppRouter'
 
 

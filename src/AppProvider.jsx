@@ -1,5 +1,4 @@
 import { createContext, useState } from 'react'
-import { useGetUser } from './hooks/useGetUser'
 import { useTask } from './hooks/useTask'
 import { useTheme } from './hooks/useTheme'
 
@@ -7,6 +6,7 @@ import { useTheme } from './hooks/useTheme'
 export const AppContext = createContext('');
 
 export const AppProvider = ({ children }) => {
+
   // Theme
   const {theme, handleSwitchTheme} = useTheme();
 
