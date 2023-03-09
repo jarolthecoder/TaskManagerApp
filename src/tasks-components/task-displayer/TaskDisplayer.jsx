@@ -17,10 +17,10 @@ export const TaskDisplayer = () => {
   const [pageTitle, setPageTitle] = useState('All tasks');
 
   const titleMap = [
-    {path: '/dashboard/', title:'All tasks'},
-    {path: '/dashboard/tasks-todo', title:'Tasks to do'},
-    {path: '/dashboard/important', title:'Important tasks'},
-    {path: '/dashboard/completed', title:'Tasks completed'},
+    {path: '/', title:'All tasks'},
+    {path: '/tasks-todo', title:'Tasks to do'},
+    {path: '/important', title:'Important tasks'},
+    {path: '/completed', title:'Tasks completed'},
   ]
 
   let curLoc = useLocation();
