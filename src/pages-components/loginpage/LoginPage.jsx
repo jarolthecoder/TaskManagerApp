@@ -1,25 +1,40 @@
 import { useContext, useState } from 'react'
 import { Button, ThemeButton } from '../../components'
-import { AppContext } from '../../AppProvider'
 import LogoRegular from '../../assets/taskmanager-logo-original.png'
 import CoverImg from '../../assets/app-cover.png'
 import './LoginPage.css'
+import { useNavigate } from 'react-router-dom'
+import { AuthContext } from '../../auth/provider'
 
 export const LoginPage = () => {
 
-  const { updateUser } = useContext(AppContext)
+  const { login } = useContext(AuthContext)
   const [userInput, setUserInput] = useState('');
+  const [errorMsg, setErrorMsg] = useState('');
+  const navigate = useNavigate();
 
   const onFormSubmit = (e) => {
     e.preventDefault()
-    const userValue = userInput.trim().toLocaleLowerCase()
-		if(userValue.length <= 1 || userValue.length > 13) return;
+    const userValue = userInput.trim().toLocaleLowerCase();
 
-    updateUser(userValue, true);
+		if(userValue.length <= 1) {
+      setErrorMsg('Username is too short!');
+      return;
+    } else if (userValue.length > 13) {
+      setErrorMsg('Username cannot be longer than 13 characters!');
+      return
+    }
+
+    login( userValue );
     setUserInput('');
+    navigate('/', {
+      replace: true
+    });
   }
+
   const onUserInput = (e) => {
-    setUserInput(e.target.value)
+    setUserInput(e.target.value);
+    setErrorMsg('');
   }
   
 
@@ -36,9 +51,9 @@ export const LoginPage = () => {
         <div className="col-left is-flex animate__animated animate__fadeIn">
             <h1>Organize your daily tasks easily with <span>TaskManager.</span></h1>
             <p className="lead">No registration needed, just create an username and start using the app!</p>
-            <form className="username-bar is-flex" onSubmit={onFormSubmit}>
+            <form className="username-bar is-flex" onSubmit={ onFormSubmit }>
               <input 
-                className="username-input" 
+                className="username-input form-input"
                 type="text" 
                 name="username"
                 value={ userInput }
@@ -47,6 +62,7 @@ export const LoginPage = () => {
               />
               <Button customClass="login-btn" text="Login" />
             </form>
+            <p className="error-msg">{ errorMsg }</p>
         </div>
         <div className="col-right animate__animated animate__fadeInBottomRight animate__fast">
           <img src={ CoverImg } alt="app-cover-img" />

@@ -1,4 +1,3 @@
-
 .login-page {
   width: 100%;
   height: 100dvh;
@@ -49,7 +48,6 @@
   border-top-left-radius: 5rem;
 }
 
-
 .login-page .brand {
   align-items: flex-end;
   gap: 0.5rem;
@@ -89,11 +87,6 @@
   color: var(--clr-text-primary);
 }
 
-.username-input:focus {
-  outline: 6px solid #5269ff24;;
-  border-color: var(--clr-button-hover);
-}
-
 .login-btn {
   padding: 1rem 2rem;
   background: var(--clr-button-bg);
@@ -103,6 +96,10 @@
 
 .login-btn:hover {
   background: var(--clr-button-hover);
+}
+
+.error-msg {
+  color: var(--clr-error);
 }
 
 /* Responsive */
@@ -145,6 +142,10 @@
 
   .login-page .brand-name {
     display: none;
+  }
+
+  .error-msg {
+    text-align: left;
   }
 
 }

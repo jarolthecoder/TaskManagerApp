@@ -15,7 +15,9 @@ export const Dashboard = ({ tasks, handleModalVisible }) => {
             text="Add a task"
           />
         : tasks.map(task => {
-          return ( <TaskItem key={task.id} task={ task } /> )
+            return ( 
+              <TaskItem key={task.id} task={ task } /> 
+            )
         })
       }
     </div>

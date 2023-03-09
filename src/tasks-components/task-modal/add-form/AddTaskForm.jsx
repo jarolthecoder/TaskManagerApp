@@ -37,17 +37,18 @@ export const AddTaskForm = () => {
         <label htmlFor="title-input">Title</label>
         <input 
           type="text" 
-          className="title-input" 
+          id="title-input" 
+          className="title-input form-input" 
           name="title"
           value={ title }
           onChange={ onInputChange }
-          id="title-input" 
-          placeholder="Enter a title"/>
+          placeholder="Enter a title"
+          required />
       </div>
       <div className="form-block">
         <label htmlFor="description">Description</label>
         <textarea 
-          className="description" 
+          className="description form-input" 
           id="description" 
           name="description"
           value={ description }

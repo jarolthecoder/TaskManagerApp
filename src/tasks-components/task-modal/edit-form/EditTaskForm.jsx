@@ -38,17 +38,18 @@ export const EditTaskForm = () => {
         <label htmlFor="title-input">Title</label>
         <input 
           type="text" 
-          className="title-input" 
+          id="title-input" 
+          className="title-input form-input" 
           name="title"
           value={ title }
           onChange={ onInputChange }
-          id="title-input" 
-          placeholder="Enter a title"/>
+          placeholder="Enter a title"
+          required />
       </div>
       <div className="form-block">
         <label htmlFor="description">Description</label>
         <textarea 
-          className="description" 
+          className="description form-input" 
           id="description" 
           name="description"
           value={ description }
@@ -56,7 +57,8 @@ export const EditTaskForm = () => {
           cols="30" 
           rows="10"
           placeholder="Enter a description"
-        ></textarea>
+        >
+        </textarea>
       </div>
       <div className="form-block checkbox-wrapper is-flex">
         <label htmlFor="completed-btn" className="container">

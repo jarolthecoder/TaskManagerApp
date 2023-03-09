@@ -10,9 +10,6 @@ export const AppProvider = ({ children }) => {
   // Theme
   const {theme, handleSwitchTheme} = useTheme();
 
-  // User Authentication
-  const {user, updateUser} = useGetUser();
-
   // Task Management
   const {
     tasks, 
@@ -51,8 +48,6 @@ export const AppProvider = ({ children }) => {
   const value = {
     theme,
     handleSwitchTheme,
-    user,
-    updateUser,
     tasks,
     handleNewTask,
     handleUpdateTask,

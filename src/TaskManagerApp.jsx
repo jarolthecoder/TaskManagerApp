@@ -1,29 +1,20 @@
 import { useContext } from 'react'
-import { Navigate, Route, Routes } from 'react-router-dom'
 import { AppContext } from './AppProvider'
-import { HomePage, LoginPage } from './pages-components/'
+import { AuthProvider } from './auth/provider'
 import { TaskModal } from './tasks-components/task-modal/TaskModal'
+import { AppRouter } from './router/AppRouter'
 
 
 const TaskManagerApp = () => {
-  const { theme, user } = useContext(AppContext);
+  const { theme } = useContext(AppContext);
   
   return (
-    <main className="main-container" data-theme={ theme }>
-      <Routes>
-        <Route
-          exact
-          path="/"
-          element={
-            !user.isLoggedIn 
-            ? ( <LoginPage /> ) 
-            : ( <Navigate replace to={"/dashboard/"} /> )
-          }
-        />
-        <Route path="/dashboard/*" element={ <HomePage />} />
-      </Routes>
-      <TaskModal />
-    </main>
+    <AuthProvider>
+      <main className="main-container" data-theme={ theme }>
+        <AppRouter />
+        <TaskModal />
+      </main>
+    </AuthProvider>
   )
 }
 

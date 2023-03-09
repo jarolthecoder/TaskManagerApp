@@ -8,7 +8,7 @@
 }
 
 .search-bar:focus-within {
-  box-shadow: 0 0 2.5px 5px #5269ff29;
+  box-shadow: 0 0px 2.5px 5px#5269ff29;
   border-color: var(--clr-button-hover);
 }
 

@@ -4,27 +4,26 @@ import { AppContext } from '../../AppProvider'
 import { ThemeButton } from '../theme-button/ThemeButton'
 import { Button } from '../button/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRightToBracket, faBell, faGear } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRightFromBracket, faBell, faGear } from '@fortawesome/free-solid-svg-icons'
 import UserImg from '../../assets/user-template.png'
 import './UserPanel.css'
-import { AuthContext } from '../../auth/provider/AuthProvider'
+import { AuthContex } from '../../auth/provider'
 
 
 // Icons
-const logoutIcon = <FontAwesomeIcon icon={ faArrowRightToBracket } />
+const logoutIcon = <FontAwesomeIcon icon={ faArrowRightFromBracket } />
 const notificationIcon = <FontAwesomeIcon icon={ faBell } />
 const settingsIcon = <FontAwesomeIcon icon={ faGear } />
 
 export const UserPanel = ({ openMenu, menuVisible }) => {
   
-  const { user, logout } = useContext(AuthContext);
+  const { user, logout } = useContext(AuthContex);
   const navigate = useNavigate();
 
   const onLogout = () => {
     navigate('/', {
       replace: true
     })
-
     logout()
   }
 
@@ -44,15 +43,13 @@ export const UserPanel = ({ openMenu, menuVisible }) => {
           <h4 className="user-name">{ user?.name }</h4>
           <p className="user-title">Super admin</p>
         </div>
-        <figure className="img-wrapper">
-           <img 
-            src={ UserImg } 
-            className={`user-img ${menuVisible ? 'menu-active' : ''}`} 
-            onClick={ openMenu }
-            alt="User Profile Image" 
-            width="50" height="auto"
-          />
-        </figure>
+        <img 
+          src={ UserImg } 
+          className={`user-img ${menuVisible ? 'menu-active' : ''}`}
+          onClick={ openMenu }
+          alt="User Profile Image" 
+          width="50" 
+          height="auto"/>
       </div>
     </>
   )

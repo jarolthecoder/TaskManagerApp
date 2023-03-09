@@ -56,7 +56,7 @@
   padding: 0.7rem;
   background: var(--clr-form-field);
   border-radius: 0.5rem;
-  border: 2px solid #ffff0000;
+  border: 2.5px solid #ffff0000;
   font-family: inherit;
   font-size: var(--fs-regular);
 }
@@ -64,12 +64,6 @@
 .form-block input::placeholder,
 .form-block textarea::placeholder {
   color: var(--clr-text-primary);
-}
-
-.form-block input:focus, 
-.form-block textarea:focus {
-  outline: 6px solid #5269ff24;;
-  border-color: var(--clr-button-hover)
 }
 
 .form-block label {

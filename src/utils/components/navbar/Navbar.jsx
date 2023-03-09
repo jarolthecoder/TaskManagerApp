@@ -8,7 +8,7 @@ import './Navbar.css'
 export const Navbar = () => {
 
   const navLinks = [
-    {name:'Dashboard', icon: faHomeAlt, url:'/', step:'/'},
+    {name:'Dashboard', icon: faHomeAlt, url:'/', step:'dashboard'},
     {name:'Tasks to do', icon: faListDots, url:'/tasks-todo', step:'tasks-todo'},
     {name:'Important', icon: faStar, url:'/important', step:'important'},
     {name:'Completed', icon: faCircleCheck, url:'/completed', step:'completed'}

@@ -31,8 +31,10 @@
 
   /* Accents */
   --clr-accent: #3852fa;
+  --clr-error: #ff6363;
   --clr-bg-accent: #3852fa0c;
 
+  /* Fonts (Weight, Size) */
   --fw-light: 300;
   --fw-regular: 400;
   --fw-bold: 700;
@@ -49,7 +51,7 @@
   --clr-displayer: #100E1C;
   --clr-sidebar: #1B1D2E;
   --clr-divider: var(--clr-sidebar);
-  --clr-divider-light: #3e3d5c;
+  --clr-divider-light: #5b6084;
 
   /* Text */
   --clr-heading-primary: var(--clr-heading-secondary);
@@ -103,6 +105,12 @@ input,
 textarea {
   font-family: 'DM Sans', sans-serif;
   color: var(--clr-heading-secondary);
+}
+
+.form-input:focus {
+  outline: none;
+  box-shadow: 0 0 2.5px 5px #5269ff29;
+  border-color: var(--clr-button-hover);
 }
 
 a {

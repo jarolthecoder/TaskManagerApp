@@ -1,0 +1,38 @@
+.toggle-theme-btn {
+  position: relative;
+  width: 52.5px;
+  height: 22.5px;
+  padding: 0.18rem 0.3rem;
+  align-items: center;
+  border-radius: 5rem;
+  border: none;
+  font-size: var(--fs-small);
+  background: var(--clr-displayer);
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--clr-sidebar);
+}
+
+.toggle-theme-btn span {
+  color: var(--clr-heading-primary);
+  opacity: 0.5;
+}
+
+.toggle-theme-btn-circle {
+  position: absolute;
+  top: 1.55px;
+  left: 3.5px;
+  width: 17.5px;
+  height: 17.5px;
+  border-radius: 100%;
+  color: #848993;
+  background: var(--clr-heading-secondary);
+  transition: transform ease 0.2s;
+  font-size: var(--fs-small);
+  z-index: 1;
+}
+
+.dark-active .toggle-theme-btn-circle {
+  transform: translateX(155%);
+}

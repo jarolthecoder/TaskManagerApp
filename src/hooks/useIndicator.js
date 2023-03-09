@@ -38,7 +38,7 @@ useEffect(() => {
 
 
   useEffect(() => {
-    const currentPath = window.location.pathname.split('/dashboard/')[1];
+    const currentPath = window.location.pathname.split('/')[1];
     const activeLink = navLinks.findIndex(link => link.step === currentPath);
     setActiveIndex(currentPath.length === 0 ? 0 : activeLink);
   }, [location])

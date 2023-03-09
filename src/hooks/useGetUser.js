@@ -6,7 +6,7 @@ export const useGetUser = () => {
   // Initial user state
   const [user, setUser] = useState({
     name: '',
-    isLoggedIn: false
+    loginToken: false
   });
 
   // Get user data from local storage on render
@@ -19,15 +19,15 @@ export const useGetUser = () => {
   }, [])
 
   // Update user state values on login
-  const updateUser = (name,isLoggedIn) => {
+  const updateUser = (name, loginToken) => {
     setUser({
       name,
-      isLoggedIn
+      loginToken
     })
 
     localStorage.setItem('user', JSON.stringify({
       name,
-      isLoggedIn
+      loginToken
     }))
   }
   

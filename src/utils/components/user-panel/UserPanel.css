@@ -25,11 +25,6 @@
   background: none;
 }
 
-.logout-text {
-  font-size: var(--fs-small);
-  padding-right: 0.5rem;
-}
-
 .user {
   justify-content: space-between;
   align-items: center;
@@ -59,29 +54,11 @@
 
   .user-img {
     width: 35px;
-    position: relative;
-  }
-
-  .img-wrapper::before {
-    position: absolute;
-    bottom: 30%;
-    right: 3%;
-    content: '=';
-    width: 15px;
-    height: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--clr-button-text);
-    background: var(--clr-button-bg);
-    border-radius: 100%;
-    font-size: var(--fs-small);
-    z-index: 2;
   }
 
   .user-img.menu-active {
     border-color: var(--clr-button-hover);
-    box-shadow: 0 0 2.5px 5px #5269ff29;
+    box-shadow: 0 0px 2.5px 5px#5269ff29;
   }
   
   .user-controls .controls-right,

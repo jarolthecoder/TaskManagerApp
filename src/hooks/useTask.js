@@ -1,5 +1,5 @@
 import { useReducer, useEffect } from 'react'
-import { taskReducer } from '../helpers/taskReducer';
+import { taskReducer } from '../utils/taskReducer';
 
 
 // Reducer params

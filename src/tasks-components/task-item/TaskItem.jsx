@@ -18,7 +18,7 @@ export const TaskItem = ({ task }) => {
     handleImportantToggle,
     handleEditTask,
     onDelete
-  } = useContext(AppContext)
+  } = useContext(AppContext);
   
   
   return (
