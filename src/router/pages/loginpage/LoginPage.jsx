@@ -50,7 +50,7 @@ export const LoginPage = () => {
       <div className="login-inner-wrapper">
         <div className="col-left is-flex animate__animated animate__fadeIn">
             <h1>Get More Done and Stress Less with <span>TaskManager.</span></h1>
-            <p className="lead">No registration needed, just create an username and start using the app!</p>
+            <p className="lead">No registration needed, just create a username and start using the app!</p>
             <form className="username-bar is-flex" onSubmit={ onFormSubmit }>
               <input 
                 className="username-input form-input"

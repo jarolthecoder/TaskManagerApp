@@ -8,7 +8,7 @@ export const AppContext = createContext('');
 export const AppProvider = ({ children }) => {
 
   // Theme
-  const {theme, handleSwitchTheme} = useTheme();
+  const { theme, handleSwitchTheme } = useTheme();
 
   // Task Management
   const {
