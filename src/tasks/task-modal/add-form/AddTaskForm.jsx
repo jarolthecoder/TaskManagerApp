@@ -8,8 +8,8 @@ export const AddTaskForm = () => {
   const { handleNewTask, handleModalVisible } = useContext(AppContext)
 
   const { title, description, isCompleted, isImportant, onInputChange, onReset } = useForm({
-    title: "",
-    description: "",
+    title: '',
+    description: '',
     isCompleted: false,
     isImportant: false
   });

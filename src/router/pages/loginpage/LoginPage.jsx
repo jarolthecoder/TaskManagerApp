@@ -15,7 +15,7 @@ export const LoginPage = () => {
 
   const onFormSubmit = (e) => {
     e.preventDefault()
-    const userValue = userInput.trim().toLocaleLowerCase();
+    const userValue = userInput.trim();
 
 		if(userValue.length <= 1) {
       setErrorMsg('Username is too short!');
