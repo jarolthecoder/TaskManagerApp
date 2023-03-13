@@ -16,9 +16,8 @@
   position: relative;
   border-radius: 0.5rem;
   display: block;
-  overflow: hidden;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .login-page .col-left {
