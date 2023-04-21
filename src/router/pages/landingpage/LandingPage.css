@@ -1,0 +1,150 @@
+.login-page {
+  width: 100%;
+  height: 100dvh;
+  max-height: 100dvh;
+  background: var(--clr-sidebar);
+  overflow: hidden;
+}
+
+.login-page-header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5rem;
+}
+
+.login-inner-wrapper {
+  position: relative;
+  border-radius: 0.5rem;
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+
+.login-page .col-left {
+  position: relative;
+  width: 70%;
+  padding: 5rem;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.login-page .col-right {
+  position: absolute;
+  bottom: 0;
+  right: -1%;
+  width: 1100px;
+  border-top-left-radius: 0.5rem;
+  display: flex;
+  justify-content: end;
+}
+
+.login-page .col-right img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 5rem;
+}
+
+.login-page .brand {
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.login-page .brand-logo {
+  width: 3rem;
+}
+
+.login-page .brand-name {
+  display: block;
+  font-size: var(--fs-large);
+}
+
+.login-page .lead {
+  font-size: var(--fs-medium);
+  color: var(--clr-heading-secondary);
+}
+
+.login-page .username-bar {
+  width: 100%;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.login-page .username-input {
+  width: 50%;
+  padding: 0.7rem;
+  background: var(--clr-displayer);
+  border-radius: 0.5rem;
+  border: 3px solid #ffff0000;
+  font-family: inherit;
+  font-size: var(--fs-regular);
+}
+
+.username-input::placeholder {
+  color: var(--clr-text-primary);
+}
+
+.login-btn {
+  padding: 1rem 2rem;
+  background: var(--clr-button-bg);
+  color: var(--clr-button-text);
+  border-radius: 0.2rem;
+}
+
+.login-btn:hover {
+  background: var(--clr-button-hover);
+}
+
+.error-msg {
+  color: var(--clr-error);
+}
+
+/* Responsive */
+@media screen and (max-width: 1255px) {
+  .login-page .col-right {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .login-page .col-left {
+    width: 100%;
+  }
+
+}
+
+@media  screen and (max-width: 775px) {
+  .login-page-header,
+  .login-page .col-left {
+    padding: 2rem 1rem;
+  }
+
+  .login-page .col-left,
+  .login-page .username-input {
+    width: 100%;
+  }
+
+  .login-page .col-left {
+    text-align: center;
+  }
+
+  .login-page .col-right {
+    bottom: 8dvh;
+    width: 100%;
+  }
+
+  .login-page .username-bar {
+    gap: 0.5rem;
+  }
+
+  .login-page .brand-name {
+    display: none;
+  }
+
+  .error-msg {
+    text-align: left;
+  }
+
+}

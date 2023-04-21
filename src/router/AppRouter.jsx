@@ -1,13 +1,13 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { HomePage, LoginPage } from './pages'
+import { HomePage, LoginPage, LandingPage } from './pages'
 import { PrivateRoute } from './PrivateRoute'
 
 export const AppRouter = () => {
   return (
     <Routes> 
-      <Route path="login" element={ <LoginPage /> }/>
-      <Route path="/*" element={ 
+      <Route path="/*" element={ <LandingPage /> }/>
+      <Route path="/dashboard/*" element={ 
         <PrivateRoute>
           <HomePage /> 
         </PrivateRoute>
