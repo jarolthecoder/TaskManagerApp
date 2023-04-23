@@ -17,7 +17,7 @@ export const TaskDisplayer = () => {
   const [pageTitle, setPageTitle] = useState('All tasks');
 
   const titleMap = [
-    {path: '/dashboard/', title:'All tasks'},
+    {path: '/dashboard/all', title:'All tasks'},
     {path: '/dashboard/tasks-todo', title:'Tasks to do'},
     {path: '/dashboard/important', title:'Important tasks'},
     {path: '/dashboard/completed', title:'Tasks completed'},
@@ -42,7 +42,7 @@ export const TaskDisplayer = () => {
           text={ addIcon }/>
       </div>
       <Routes>
-        <Route path="/" element={ <Dashboard tasks={ tasks } handleModalVisible={ handleModalVisible } /> } />
+        <Route path="all" element={ <Dashboard tasks={ tasks } handleModalVisible={ handleModalVisible } /> } />
         <Route path="tasks-todo" element={ <Todo tasks={ tasks } handleModalVisible={ handleModalVisible } /> } />
         <Route path="important" element={ <Important tasks={ tasks } handleModalVisible={ handleModalVisible } /> } />
         <Route path="completed" element={ <Completed tasks={ tasks } /> } />

@@ -27,7 +27,7 @@ export const LandingPage = () => {
 
     login( userValue );
     setUserInput('');
-    navigate('/dashboard/', {
+    navigate('/dashboard/all', {
       replace: true
     });
   }
